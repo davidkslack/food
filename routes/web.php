@@ -11,9 +11,21 @@
 |
 */
 
+$router->group(['prefix' => 'admin'], function () use ($router) {
+
+	// Menu manage
+	$router->get('menu', 'Menu@index');
+
+	// User manage
+	$router->get('user', 'User@index');
+
+	// Orders
+	$router->get('order', 'Order@index');
+	$router->get('order/{id}', 'Order@read');
+	$router->get('completed', 'Order@completed');
+});
+
+
+// Login
 $router->get('admin', 'Admin@index');
 $router->post('admin', 'Admin@postLogin');
-$router->get('menu', 'Menu@index');
-$router->get('user', 'User@index');
-$router->get('order', 'Order@index');
-$router->get('completed', 'Order@completed');

@@ -17,23 +17,23 @@
                 <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Chicken club<br>Coffee</td>
-                    <td>11:22 30 Aug</td>
-                    <td>Processing...</td>
+                    <td><a href="/order/1">Chicken club<br>Coffee</a></td>
+                    <td><a href="/order/1">11:22 30 Aug</a></td>
+                    <td><a href="/order/1">Processing...</a></td>
                     <td><button type="button" class="btn btn-success">Complete</button></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Chicken club<br>Coffee</td>
-                    <td>11:22 30 Aug</td>
-                    <td>Processing...</td>
+                    <td><a href="/order/1">Chicken club<br>Coffee</a></td>
+                    <td><a href="/order/1">11:22 30 Aug</a></td>
+                    <td><a href="/order/1">Processing...</a></td>
                     <td><button type="button" class="btn btn-success">Complete</button></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Chicken club<br>Coffee</td>
-                    <td>11:22 30 Aug</td>
-                    <td>Processing...</td>
+                    <td><a href="/order/1">Chicken club<br>Coffee</a></td>
+                    <td><a href="/order/1">11:22 30 Aug</a></td>
+                    <td><a href="/order/1">Processing...</a></td>
                     <td><button type="button" class="btn btn-success">Complete</button></td>
                 </tr>
                 </tbody>

@@ -16,4 +16,11 @@ class Order extends Controller
 		$data = ['name' => 'completed'];
 		return view('view', $data);
 	}
+
+
+	public function read()
+	{
+		$data = ['name' => 'order-show'];
+		return view('view', $data);
+	}
 }
