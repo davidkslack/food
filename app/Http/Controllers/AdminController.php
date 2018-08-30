@@ -10,7 +10,7 @@ class AdminController extends Controller
     public function login()
     {
     	$data = [
-    		'name' 	=> 'admin'
+    		'name' 	=> 'login'
 		];
         return view('view', $data);
     }
