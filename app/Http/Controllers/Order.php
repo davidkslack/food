@@ -9,4 +9,11 @@ class Order extends Controller
 		$data = ['name' => 'order'];
 		return view('view', $data);
 	}
+
+
+	public function completed()
+	{
+		$data = ['name' => 'completed'];
+		return view('view', $data);
+	}
 }

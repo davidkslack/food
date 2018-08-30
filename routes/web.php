@@ -16,3 +16,4 @@ $router->post('admin', 'Admin@postLogin');
 $router->get('menu', 'Menu@index');
 $router->get('user', 'User@index');
 $router->get('order', 'Order@index');
+$router->get('completed', 'Order@completed');
