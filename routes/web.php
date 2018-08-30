@@ -11,6 +11,12 @@
 |
 */
 
+$router->get('admin', 'AdminController@login');
+
+$router->post('admin', function () {
+    return 'Hello World';
+});
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
