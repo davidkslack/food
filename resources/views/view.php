@@ -6,5 +6,6 @@ include 'head.php';
 if( $name != 'login')
 	include 'nav.php';
 
+// Content page to add
 include 'content/' . $name . '.php';
 include 'foot.php';

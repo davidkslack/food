@@ -11,12 +11,8 @@
 |
 */
 
-$router->get('admin', 'AdminController@login');
-
-$router->post('admin', function () {
-    return 'Hello World';
-});
-
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('admin', 'Admin@index');
+$router->post('admin', 'Admin@postLogin');
+$router->get('menu', 'Menu@index');
+$router->get('user', 'User@index');
+$router->get('order', 'Order@index');
