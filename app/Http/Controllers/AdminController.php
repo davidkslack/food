@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 class AdminController extends Controller
 {
-
+	/**
+	 * @return \Illuminate\View\View
+	 */
     public function login()
     {
-        return view('admin', ['name' => 'Test']);
+    	$data = [
+    		'name' 	=> 'admin'
+		];
+        return view('view', $data);
     }
 }
