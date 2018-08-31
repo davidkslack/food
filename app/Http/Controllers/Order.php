@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use \Database\Model\Food\Order as Orders;
 
 class Order extends Controller
 {
+	/**
+	 * @return \Illuminate\View\View
+	 */
 	public function index()
 	{
 		$data = ['name' => 'order'];
@@ -11,13 +15,27 @@ class Order extends Controller
 	}
 
 
+	/**
+	 * @return \Illuminate\View\View
+	 */
 	public function completed()
 	{
-		$data = ['name' => 'completed'];
+		$completed = Orders::where('status', 'completed')
+			->orderBy('ordered_at', 'desc')
+			->with('food')
+			->get();
+
+		$data = [
+			'name' 		=> 'completed',
+			'completed' => $completed
+		];
 		return view('view', $data);
 	}
 
 
+	/**
+	 * @return \Illuminate\View\View
+	 */
 	public function read()
 	{
 		$data = ['name' => 'order-show'];

@@ -13,4 +13,12 @@ class Food extends Model
 	 * @var string
 	 */
 	protected $table = 'food';
+
+	/**
+	 * Get the orders for the food.
+	 */
+	public function orders()
+	{
+		return $this->belongsToMany('\Database\Model\Food\Orders', 'food_order', 'food_id', 'order_id');
+	}
 }
