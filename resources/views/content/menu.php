@@ -3,8 +3,6 @@
         <div class="col">
             <h1>Menu</h1>
             <p>All food is shown and can be deited from this page.</p>
-
-
             <table class="table table-hover">
                 <thead>
                 <tr>
