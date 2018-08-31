@@ -31,3 +31,10 @@ $router->group(['prefix' => 'admin', 'middleware' => 'auth'], function () use ($
 // Login
 $router->get('admin', 'Admin@index');
 $router->post('admin', 'Admin@postLogin');
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    // Orders
+    $router->get('orders', 'ApiOrder@showAllOrders');
+    $router->get('orders/{id}', 'ApiOrder@showOneOrder');
+    $router->post('orders', 'ApiOrder@create');
+});
