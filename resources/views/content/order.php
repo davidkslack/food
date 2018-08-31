@@ -1,3 +1,12 @@
+<script>
+    /**
+     * Add check for new row in the DB by taking the latest order ID and passing to an endpoint
+     * Will return all the new rows which we can add in to the table
+     *
+     * Add the complete method which will change status in the DB and remove the row from the table
+     */
+</script>
+
 <div class="container">
 	<div class="row">
         <div class="col">
