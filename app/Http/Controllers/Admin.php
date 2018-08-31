@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use \Database\Model\Food\User as User;
 
 class Admin extends Controller
 {
@@ -25,10 +26,28 @@ class Admin extends Controller
 		$email = $request->input('email');
 		$pass = $request->input('pass');
 
-    	$data = [
-    		'name' 	=> 'order',
-			'email' => $email
-		];
-        return view('view', $data);
+		$user = User::where('email', $email)->first();
+
+		if (is_null($user)) return redirect('/admin');
+
+		$passHash = md5($pass);
+        if ($user->hash == $passHash) {
+            $_SESSION["authorised"] = true;
+            $_SESSION["id"] = $user->user_id;
+            return redirect('/admin/order');
+        }
+        return redirect('/admin');
+    }
+
+
+    /**
+     * @return \Illuminate\View\View
+     */
+    public function logout()
+    {
+        $_SESSION["authorised"] = false;
+        $_SESSION["id"] = null;
+        $data = ['name' => 'login'];
+        return redirect('/admin');
     }
 }

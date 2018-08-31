@@ -11,7 +11,7 @@
 |
 */
 
-$router->group(['prefix' => 'admin'], function () use ($router) {
+$router->group(['prefix' => 'admin', 'middleware' => 'auth'], function () use ($router) {
 
 	// Menu manage
 	$router->get('menu', 'Menu@index');
@@ -23,6 +23,8 @@ $router->group(['prefix' => 'admin'], function () use ($router) {
 	$router->get('order', 'Order@index');
 	$router->get('order/{id}', 'Order@read');
 	$router->get('completed', 'Order@completed');
+
+    $router->get('logout', 'Admin@logout');
 });
 
 

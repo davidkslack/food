@@ -14,6 +14,9 @@
 			<li class="nav-item<?php if($name == 'completed') echo ' active' ?>">
 				<a class="nav-link" href="/admin/completed">Completed orders<?php if($name == 'completed') echo ' <span class="sr-only">(current)</span>' ?></a>
 			</li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/logout">Logout</a>
+            </li>
 		</ul>
 	</div>
 </nav>
