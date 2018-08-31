@@ -23,6 +23,7 @@ $router->group(['prefix' => 'admin', 'middleware' => 'auth'], function () use ($
 	$router->get('order', 'Order@index');
 	$router->get('order/{id}', 'Order@read');
 	$router->get('completed', 'Order@completed');
+	$router->get('complete/{id}', 'Order@completedId');
 
     $router->get('logout', 'Admin@logout');
 });

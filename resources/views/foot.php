@@ -9,4 +9,15 @@
 <script src="/vendor/countdowntime/countdowntime.js"></script>
 <script src="/js/main.js"></script>
 
+<script>
+
+    /**
+     * On clicking the complete button of the orders page
+     */
+    $('.orders-page .complete-btn').click(function () {
+        var url = '/admin/complete/' + $(this).data("id");
+        window.location.replace(url);
+    });
+</script>
+
 </body></html>

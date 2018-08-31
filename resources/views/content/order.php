@@ -7,7 +7,7 @@
      */
 </script>
 
-<div class="container">
+<div class="container orders-page">
 	<div class="row">
         <div class="col">
             <h1>Orders</h1>
@@ -43,7 +43,7 @@
                             </table>
                         </td>
                         <td><?php echo date( 'H:i jS M', strtotime( $order->ordered_at )) ?></td>
-                        <td><button type="button" class="btn btn-success">Complete</button></td>
+                        <td><button type="button" class="complete-btn btn btn-success" data-id="<?php echo $order->order_id ?>">Complete</button></td>
                     </tr>
 				<?php endforeach; ?>
                 </tbody>

@@ -43,6 +43,19 @@ class Order extends Controller
 
 
 	/**
+	 * Complete an order by ID
+	 * @param null $id
+	 * @return \Illuminate\Http\RedirectResponse|\Laravel\Lumen\Http\Redirector
+	 */
+	public function completedId($id=null)
+	{
+		Orders::where('order_id', $id)
+			->update(['status' => 'completed']);
+		return redirect('/admin/order');
+	}
+
+
+	/**
 	 * @return \Illuminate\View\View
 	 */
 	public function read()
