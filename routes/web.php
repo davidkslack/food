@@ -11,13 +11,6 @@
 |
 */
 
-$router->get('foo', function () {
-	$users=Database\Model\Food\User::all();
-	foreach ($users as $user){
-		echo $user->first_name;
-	}
-});
-
 $router->group(['prefix' => 'admin'], function () use ($router) {
 
 	// Menu manage
