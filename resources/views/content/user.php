@@ -7,17 +7,20 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Created</th>
-                    <th scope="col">Role</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row"><a href="/user/1">test@test.com</a></th>
-                    <td><a href="/user/1">30 Aug 2018 10:30</a></td>
-                    <td><a href="/user/1">Admin</a></td>
-                </tr>
+				<?php foreach ($users as $user): ?>
+                    <tr>
+                        <td><?php echo $user->title ?></td>
+                        <td><?php echo $user->first_name ?> <?php echo $user->last_name ?></td>
+                        <td><?php echo $user->email ?></td>
+                        <td><a class="btn btn-primary" href="/admin/user/<?php echo $user->user_id ?>" role="button">Edit</a></td>
+                    </tr>
+				<?php endforeach; ?>
                 </tbody>
             </table>
         </div>
