@@ -10,7 +10,14 @@ class Order extends Controller
 	 */
 	public function index()
 	{
-		$data = ['name' => 'order'];
+		$orders = Orders::orderBy('ordered_at', 'desc')
+			->with('food')
+			->get();
+
+		$data = [
+			'name' 		=> 'order',
+			'orders' 	=> $orders
+		];
 		return view('view', $data);
 	}
 
