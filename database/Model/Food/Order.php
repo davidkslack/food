@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $primaryKey = 'order_id';
+	public $timestamps = false;
 
     /**
 	 * The table associated with the model.
@@ -22,3 +23,4 @@ class Order extends Model
 		return $this->belongsToMany('\Database\Model\Food\Food', 'food_order', 'order_id', 'food_id');
 	}
 }
+
