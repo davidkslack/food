@@ -10,7 +10,9 @@ class Order extends Controller
 	 */
 	public function index()
 	{
-		$orders = Orders::orderBy('ordered_at', 'desc')
+		$orders = Orders::where('status', '!=', 'completed')
+			->orWhere('status', '=', NULL)
+			->orderBy('ordered_at', 'desc')
 			->with('food')
 			->get();
 
